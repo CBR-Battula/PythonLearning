@@ -187,3 +187,297 @@ Your branch is up to date with 'origin/main'.
 PS C:\Users\brahm\Documents\Github_Repo\PythonLearning> git branch
   New_PythonLearning
 * main
+PS C:\Users\brahm\Documents\Github_Repo> git clone https://github.com/CBR-Battula/PythonLearning.git
+Cloning into 'PythonLearning'...
+remote: Enumerating objects: 21, done.
+remote: Counting objects: 100% (21/21), done.
+remote: Compressing objects: 100% (15/15), done.
+remote: Total 21 (delta 2), reused 18 (delta 2), pack-reused 0
+Receiving objects: 100% (21/21), 5.42 KiB | 1.81 MiB/s, done.
+Resolving deltas: 100% (2/2), done.
+PS C:\Users\brahm\Documents\Github_Repo> 
+
+
+#### go to Respository "PythonLearning"
+ C:\Users\brahm\Documents\Github_Repo> cd .\PythonLearning\
+PS C:\Users\brahm\Documents\Github_Repo\PythonLearning>
+## list the branches , * indicates the current active branch and we switch the branch by checkout
+PS C:\Users\brahm\Documents\Github_Repo\PythonLearning> git branch
+* main
+PS C:\Users\brahm\Documents\Github_Repo\PythonLearning> git branch -c NewPythonLeaning
+PS C:\Users\brahm\Documents\Github_Repo\PythonLearning> git branch
+  NewPythonLeaning
+* main
+PS C:\Users\brahm\Documents\Github_Repo\PythonLearning> git checkout NewPythonLearning
+error: pathspec 'NewPythonLearning' did not match any file(s) known to git
+PS C:\Users\brahm\Documents\Github_Repo\PythonLearning> git checkout NewPythonLeaning
+Switched to branch 'NewPythonLeaning'
+Your branch is up to date with 'origin/main'.
+PS C:\Users\brahm\Documents\Github_Repo\PythonLearning> git branch
+* NewPythonLeaning
+  main
+
+
+PS C:\Users\brahm\Documents\Github_Repo\PythonLearning> git add .                
+PS C:\Users\brahm\Documents\Github_Repo\PythonLearning> git commit -m "new branch creation"
+[NewPythonLeaning ed190b3] new branch creation
+ 1 file changed, 1 insertion(+)
+ create mode 100644 PythonLearning/HelloPython.py
+PS C:\Users\brahm\Documents\Github_Repo\PythonLearning> git push origin HEAD
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (4/4), 425 bytes | 212.00 KiB/s, done.
+Total 4 (delta 0), reused 0 (delta 0), pack-reused 0
+remote: 
+remote: Create a pull request for 'NewPythonLeaning' on GitHub by visiting:
+remote:      https://github.com/CBR-Battula/PythonLearning/pull/new/NewPythonLeaning
+remote:
+To https://github.com/CBR-Battula/PythonLearning.git
+ * [new branch]      HEAD -> NewPythonLeaning
+
+PS C:\Users\brahm\Documents\Github_Repo\PythonLearning> git pull
+Already up to date.
+PS C:\Users\brahm\Documents\Github_Repo\PythonLearning> git branch
+* NewPythonLeaning
+  main
+PS C:\Users\brahm\Documents\Github_Repo\PythonLearning> git add .
+PS C:\Users\brahm\Documents\Github_Repo\PythonLearning> git commit -m "trying again and again"
+[NewPythonLeaning ad5c494] trying again and again
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+PS C:\Users\brahm\Documents\Github_Repo\PythonLearning> git push origin HEAD
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (8/8), 820 bytes | 273.00 KiB/s, done.
+Total 8 (delta 0), reused 0 (delta 0), pack-reused 0
+remote: 
+remote: Create a pull request for 'NewPythonLeaning' on GitHub by visiting:
+remote:      https://github.com/CBR-Battula/PythonLearning/pull/new/NewPythonLeaning
+remote:
+To https://github.com/CBR-Battula/PythonLearning.git
+ * [new branch]      HEAD -> NewPythonLeaning
+PS C:\Users\brahm\Documents\Github_Repo\PythonLearning> git status
+On branch NewPythonLeaning
+Your branch is ahead of 'origin/main' by 2 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+PS C:\Users\brahm\Documents\Github_Repo\PythonLearning> git branch
+* NewPythonLeaning
+  main
+PS C:\Users\brahm\Documents\Github_Repo\PythonLearning> git pull
+remote: Enumerating objects: 1, done.
+remote: Counting objects: 100% (1/1), done.
+remote: Total 1 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (1/1), 631 bytes | 126.00 KiB/s, done.
+From https://github.com/CBR-Battula/PythonLearning
+   0f0fcf9..65a2a7f  main       -> origin/main
+Updating ad5c494..65a2a7f
+Fast-forward
+PS C:\Users\brahm\Documents\Github_Repo\PythonLearning> git branch
+* NewPythonLeaning
+  main
+PS C:\Users\brahm\Documents\Github_Repo\PythonLearning> git checkout main
+Switched to branch 'main'
+Your branch is behind 'origin/main' by 3 commits, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+PS C:\Users\brahm\Documents\Github_Repo\PythonLearning> git pull
+Updating 0f0fcf9..65a2a7f
+Fast-forward
+ PythonLearning/HelloPython.py | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 PythonLearning/HelloPython.py
+PS C:\Users\brahm\Documents\Github_Repo\PythonLearning> git branch
+  NewPythonLeaning
+* main
+PS C:\Users\brahm\Documents\Github_Repo\PythonLearning> git branch -a
+  NewPythonLeaning
+* main
+  remotes/origin/HEAD -> origin/main
+  remotes/origin/NewPythonLeaning
+  remotes/origin/New_PythonLearning
+  remotes/origin/main
+PS C:\Users\brahm\Documents\Github_Repo\PythonLearning> git remote prune origin
+Pruning origin
+URL: https://github.com/CBR-Battula/PythonLearning.git
+ * [pruned] origin/NewPythonLeaning
+ * [pruned] origin/New_PythonLearning
+PS C:\Users\brahm\Documents\Github_Repo\PythonLearning> git branch
+  NewPythonLeaning
+* main
+PS C:\Users\brahm\Documents\Github_Repo\PythonLearning> git branch –D NewPythonLeaning
+PS C:\Users\brahm\Documents\Github_Repo\PythonLearning> git branch
+  NewPythonLeaning
+* main
+  –D
+PS C:\Users\brahm\Documents\Github_Repo\PythonLearning> gut pull -p
+gut : The term 'gut' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the spelling of the name, or if a path was included, verify that the path is 
+correct and try again.
+At line:1 char:1
++ gut pull -p
++ ~~~
+    + CategoryInfo          : ObjectNotFound: (gut:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\Users\brahm\Documents\Github_Repo\PythonLearning> git pull -p
+Already up to date.
+PS C:\Users\brahm\Documents\Github_Repo\PythonLearning> git branch
+  NewPythonLeaning
+* main
+  –D
+PS C:\Users\brahm\Documents\Github_Repo\PythonLearning> git branch -r
+  origin/HEAD -> origin/main
+  origin/main
+PS C:\Users\brahm\Documents\Github_Repo\PythonLearning> git branch -a
+  NewPythonLeaning
+* main
+  –D
+  remotes/origin/HEAD -> origin/main
+  remotes/origin/main
+PS C:\Users\brahm\Documents\Github_Repo\PythonLearning> git branch -d NewPythonLeaning 
+Deleted branch NewPythonLeaning (was 65a2a7f).
+PS C:\Users\brahm\Documents\Github_Repo\PythonLearning> git branch
+* main
+  –D
+PS C:\Users\brahm\Documents\Github_Repo\PythonLearning> git branch -d –D
+Deleted branch –D (was 65a2a7f).
+PS C:\Users\brahm\Documents\Github_Repo\PythonLearning> git branch
+* main
+PS C:\Users\brahm\Documents\Github_Repo\PythonLearning> cd ..
+PS C:\Users\brahm\Documents\Github_Repo> git pull
+There is no tracking information for the current branch.
+
+
+
+
+
+
+
+
+
+
+
+
+
+PS C:\Users\brahm\Documents\Github_Repo> git clone https://github.com/CBR-Battula/PythonLearning.git
+Cloning into 'PythonLearning'...
+remote: Enumerating objects: 27, done.
+remote: Counting objects: 100% (27/27), done.
+remote: Compressing objects: 100% (18/18), done.
+remote: Total 27 (delta 1), reused 23 (delta 1), pack-reused 0
+Receiving objects: 100% (27/27), 5.90 KiB | 1.97 MiB/s, done.
+Resolving deltas: 100% (1/1), done.
+PS C:\Users\brahm\Documents\Github_Repo> cd .\PythonLearning\
+PS C:\Users\brahm\Documents\Github_Repo\PythonLearning> git rm -r PythonLearning
+rm 'PythonLearning/HelloPython.py'
+PS C:\Users\brahm\Documents\Github_Repo\PythonLearning> git commit
+[main ecc2a65] ere
+ 1 file changed, 1 deletion(-)
+ delete mode 100644 PythonLearning/HelloPython.py
+PS C:\Users\brahm\Documents\Github_Repo\PythonLearning> git push origin
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 267 bytes | 267.00 KiB/s, done.
+Total 2 (delta 0), reused 1 (delta 0), pack-reused 0
+To https://github.com/CBR-Battula/PythonLearning.git
+   65a2a7f..ecc2a65  main -> main
+PS C:\Users\brahm\Documents\Github_Repo\PythonLearning> git branch
+* main
+PS C:\Users\brahm\Documents\Github_Repo\PythonLearning> git branch -c NewPythonLearning
+PS C:\Users\brahm\Documents\Github_Repo\PythonLearning> git branch
+  NewPythonLearning
+* main
+PS C:\Users\brahm\Documents\Github_Repo\PythonLearning> git checkout NewPythonLearning
+Switched to branch 'NewPythonLearning'
+Your branch is up to date with 'origin/main'.
+PS C:\Users\brahm\Documents\Github_Repo\PythonLearning> git branch
+* NewPythonLearning
+  main
+PS C:\Users\brahm\Documents\Github_Repo\PythonLearning> git status
+On branch NewPythonLearning
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        NewHelloWorld.py
+
+nothing added to commit but untracked files present (use "git add" to track)
+PS C:\Users\brahm\Documents\Github_Repo\PythonLearning> git add NewHelloWorld.py
+PS C:\Users\brahm\Documents\Github_Repo\PythonLearning> git commit -m "newfile in new branch"
+[NewPythonLearning 38fee50] newfile in new branch
+ 1 file changed, 1 insertion(+)
+ create mode 100644 NewHelloWorld.py
+PS C:\Users\brahm\Documents\Github_Repo\PythonLearning> git push origin HEAD
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 362 bytes | 181.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+remote: 
+remote: Create a pull request for 'NewPythonLearning' on GitHub by visiting:
+remote:      https://github.com/CBR-Battula/PythonLearning/pull/new/NewPythonLearning
+remote:
+To https://github.com/CBR-Battula/PythonLearning.git
+ * [new branch]      HEAD -> NewPythonLearning
+PS C:\Users\brahm\Documents\Github_Repo\PythonLearning> git branch
+* NewPythonLearning
+  main
+PS C:\Users\brahm\Documents\Github_Repo\PythonLearning> git branch -a
+* NewPythonLearning
+  main
+  remotes/origin/HEAD -> origin/main
+  remotes/origin/NewPythonLearning
+  remotes/origin/main
+PS C:\Users\brahm\Documents\Github_Repo\PythonLearning> cd ..
+PS C:\Users\brahm\Documents\Github_Repo> git pull
+There is no tracking information for the current branch.
+Please specify which branch you want to merge with.
+See git-pull(1) for details.
+
+    git pull <remote> <branch>
+
+If you wish to set tracking information for this branch you can do so with:
+
+    git branch --set-upstream-to=<remote>/<branch> main
+
+PS C:\Users\brahm\Documents\Github_Repo> cd PythonLearning
+PS C:\Users\brahm\Documents\Github_Repo\PythonLearning> git pull
+remote: Enumerating objects: 1, done.
+remote: Counting objects: 100% (1/1), done.
+remote: Total 1 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (1/1), 636 bytes | 127.00 KiB/s, done.
+From https://github.com/CBR-Battula/PythonLearning
+   ecc2a65..7c78f4f  main       -> origin/main
+Updating 38fee50..7c78f4f
+Fast-forward
+PS C:\Users\brahm\Documents\Github_Repo\PythonLearning> git branch -a
+* NewPythonLearning
+  main
+  remotes/origin/HEAD -> origin/main
+  remotes/origin/NewPythonLearning
+  remotes/origin/main
+PS C:\Users\brahm\Documents\Github_Repo\PythonLearning> git branch -d NewPythonLearning
+error: Cannot delete branch 'NewPythonLearning' checked out at 'C:/Users/brahm/Documents/Github_Repo/PythonLearning'
+PS C:\Users\brahm\Documents\Github_Repo\PythonLearning> git checkout main
+Switched to branch 'main'
+Your branch is behind 'origin/main' by 2 commits, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+PS C:\Users\brahm\Documents\Github_Repo\PythonLearning> git branch -d NewPythonLearning
+warning: deleting branch 'NewPythonLearning' that has been merged to
+         'refs/remotes/origin/main', but not yet merged to HEAD.
+Deleted branch NewPythonLearning (was 7c78f4f).
+PS C:\Users\brahm\Documents\Github_Repo\PythonLearning> git branch
+* main
+PS C:\Users\brahm\Documents\Github_Repo\PythonLearning> git pull
+Updating ecc2a65..7c78f4f
+Fast-forward
+ NewHelloWorld.py | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 NewHelloWorld.py
+PS C:\Users\brahm\Documents\Github_Repo\PythonLearning>
