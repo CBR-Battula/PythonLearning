@@ -122,3 +122,61 @@ nothing to commit, working tree clean
 C:\Users\brahm\Documents\Github_Repo\PythonLearning>
 
 ## Go and check in the report github repository for the file.
+
+# you can run the commands in vs code via integrated terminal
+right click on the file in vs code and choose "open in integrated terminal"
+PS C:\Users\brahm\Documents\Github_Repo\PythonLearning> ls
+
+
+    Directory: C:\Users\brahm\Documents\Github_Repo\PythonLearning
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----        11-08-2023     11:41              0 HelloWorld.py
+-a----        11-08-2023     11:58           5154 README.md
+
+
+PS C:\Users\brahm\Documents\Github_Repo\PythonLearning> git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   HelloWorld.py
+
+no changes added to commit (use "git add" and/or "git commit -a")
+PS C:\Users\brahm\Documents\Github_Repo\PythonLearning> git add HelloWorld.py
+PS C:\Users\brahm\Documents\Github_Repo\PythonLearning> git commit -m "simple addition program"
+[main b34e47e] simple addition program
+ 1 file changed, 5 insertions(+)
+PS C:\Users\brahm\Documents\Github_Repo\PythonLearning> git push origin
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 378 bytes | 378.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/CBR-Battula/PythonLearning.git
+   8ddcdfe..b34e47e  main -> main
+PS C:\Users\brahm\Documents\Github_Repo\PythonLearning> git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+PS C:\Users\brahm\Documents\Github_Repo\PythonLearning>
+
+## create a new branch
+PS C:\Users\brahm\Documents\Github_Repo\PythonLearning> git branch
+* main
+PS C:\Users\brahm\Documents\Github_Repo\PythonLearning> git branch -c New_PythonLearning
+PS C:\Users\brahm\Documents\Github_Repo\PythonLearning> git branch
+  New_PythonLearning
+* main
+PS C:\Users\brahm\Documents\Github_Repo\PythonLearning> git checkout New_PythonLearning
+Switched to branch 'New_PythonLearning'
+Your branch is up to date with 'origin/main'.
+PS C:\Users\brahm\Documents\Github_Repo\PythonLearning> git branch
+* New_PythonLearning
+  main
